@@ -1,0 +1,21 @@
+{
+  "name": "message_mixer",
+  "version": "1.0.0",
+  "description": "Should return a random sentence everytime the program is exec",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fth-kvmp/message-mixer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fth-kvmp/message-mixer/issues"
+  },
+  "homepage": "https://github.com/fth-kvmp/message-mixer#readme",
+  "type": "module"
+}
+

@@ -1,6 +1,8 @@
 // Sample script that should return a random message every time its run
 // Im not sure i understood the project correctly but guess the script return everytime a random sentence so...
 
+//import { argv } from 'node:process';
+import { argv } from 'process'
 
 // proverbs i found on https://preply.com/en/blog/popular-english-proverbs/
 // made a little script to get the proverbs as a string
@@ -12,7 +14,11 @@ const arrayedProverbs = proverbs.split('. ')
 const persons = ['child', 'boy', 'girl', 'daughter', 'son', 'father', 'mother']
 const closure = ['Have a good day', 'Spread wisdom', 'Spread love', 'Help me', 'Wish you good luck', 'Take care']
 
-if(arguments[0]){
-    console.log('there is an arg')
-}
-console.log(`You should tell to your ${persons[Math.floor(Math.random() * persons.length)]}. ${arrayedProverbs[Math.floor(Math.random() * arrayedProverbs.length)]}. ${closure[Math.floor(Math.random() * closure.length)]}.`)
+let sentence = `You should tell to your ${persons[Math.floor(Math.random() * persons.length)]}. ${arrayedProverbs[Math.floor(Math.random() * arrayedProverbs.length)]}. ${closure[Math.floor(Math.random() * closure.length)]}.`
+
+if(argv[2])(
+    sentence = argv[2] + '\n' + sentence
+)
+
+
+console.log(sentence)
